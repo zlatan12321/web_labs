@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+    <link rel="stylesheet" href="src/assets/styles/style.css">
 </head>
 <body>
     <header>
@@ -15,23 +16,36 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
+        <nav aria-label="Хлебные крошки">
+            <ol class="breadcrumbs">
+                <li><span aria-current="page">Главная</span></li>
+            </ol>
+        </nav>
     </header>
-        <main>
-        <h1>Мой первый сайт</h1>
-        <p>Добро пожаловать на мой сайт, созданный в рамках лабораторной работы.</p>
 
-        <h3>О проекте</h3>
-        <h4>Изучение основ веб-разработки</h4>
-        <p>На этом сайте я учусь создавать страницы с помощью HTML.</p>
+    <main>
+        <h1 class="heading-main">Мой первый сайт</h1>
+        <p class="text">
+            Добро пожаловать на мой сайт, созданный в рамках лабораторной работы.
+        </p>
 
-        <h3>Мои навыки</h3>
-        <p>Работа с Git, создание разметки и настройка ссылок.</p>
+        <h3 class="heading-section">О проекте</h3>
+        <h4 class="heading-small">Изучение основ веб-разработки</h4>
+        <p class="text">
+            На этом сайте я учусь создавать страницы с помощью HTML.
+        </p>
+
+        <h3 class="heading-section">Мои навыки</h3>
+        <p class="text">
+            Работа с Git, создание разметки и настройка ссылок.
+        </p>
     </main>
 
     <hr>
-        <footer>
-        <h3>Свяжитесь с нами</h3>
-        <p>Будем рады ответить на ваши вопросы.</p>
+
+    <footer>
+        <h3 class="heading-section">Свяжитесь с нами</h3>
+        <p class="text">Будем рады ответить на ваши вопросы.</p>
 
         <hr>
 
@@ -41,7 +55,7 @@
             <li>student@example.com</li>
         </ul>
 
-        <p>Все права защищены</p>
+        <p class="text">Все права защищены</p>
     </footer>
 </body>
 </html>
