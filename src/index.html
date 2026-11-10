@@ -2,17 +2,342 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РЕМОНТЯШКА</title>
+    <link rel="stylesheet" href="assets/styles/lesson3.css">
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
-</div>
+    <header class="site-header">
+        <a class="site-logo" href="#">РЕМОНТЯШКА</a>
 
-<script src="index.js"></script>
+        <nav class="main-navigation">
+            <ul class="navigation-list">
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#projects">Наши работы</a></li>
+                <li><a href="#team">Мастера</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <address class="header-contacts">
+            <a href="tel:+7555355">+7-555-355</a>
+            <a href="mailto:CompanyMail@gooogle.com">CompanyMail@gooogle.com</a>
+        </address>
+    </header>
+
+    <hr>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-description">
+                <h1>Ремонт телефонов</h1>
+
+                <p>
+                    Поможем разобраться с неисправностью телефона,
+                    подобрать запчасти и выполнить ремонт
+                </p>
+            </div>
+
+            <div class="hero-callback">
+                <h2>Оставьте контакты, и мы обсудим ремонт вашего телефона</h2>
+
+                <form class="callback-form">
+                    <p>
+                        <label for="callback-name">Ваше имя</label>
+                        <input type="text" id="callback-name" name="name" required>
+                    </p>
+
+                    <p>
+                        <label for="callback-phone">Номер телефона</label>
+                        <input type="tel" id="callback-phone" name="phone" required>
+                    </p>
+
+                    <button type="submit">Получить консультацию</button>
+                </form>
+            </div>
+
+            <img class="hero-image" src="assets/img/mobile_apps.jpg" alt="Смартфоны iPhone и примеры экранов приложений">
+        </section>
+
+        <hr>
+
+        <section class="services" id="services">
+            <div class="services-description">
+                <h2>От диагностики до готового устройства</h2>
+                <p>
+                    Определяем причину неисправности, согласовываем
+                    стоимость ремонта и проверяем устройство после работы.
+                </p>
+
+                <h3>Устройства Apple</h3>
+                <ul class="apple-devices">
+                    <li>iPhone</li>
+                    <li>iPad</li>
+                    <li>Apple Watch</li>
+                </ul>
+
+                <h3>Устройства на Android</h3>
+                <ul class="android-devices">
+                    <li>Смартфоны</li>
+                    <li>Планшеты</li>
+                    <li>Умные часы</li>
+                </ul>
+            </div>
+
+            <div class="services-offer">
+                <h3>Наши услуги</h3>
+
+                <ul class="services-list">
+                    <li>Диагностика неисправностей</li>
+                    <li>Замена экрана</li>
+                    <li>Замена аккумулятора</li>
+                    <li>Ремонт разъёма зарядки</li>
+                    <li>Замена камеры</li>
+                    <li>Чистка после попадания жидкости</li>
+                    <li>Настройка программного обеспечения</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="device-brands" id="brands">
+            <h2>Ремонтируем устройства разных брендов</h2>
+
+            <ul class="brands-list">
+                <li>Apple</li>
+                <li>Samsung</li>
+                <li>Xiaomi</li>
+                <li>Redmi</li>
+                <li>POCO</li>
+                <li>Huawei</li>
+                <li>Honor</li>
+                <li>Realme</li>
+                <li>OPPO</li>
+                <li>Vivo</li>
+                <li>OnePlus</li>
+                <li>Google</li>
+                <li>Nokia</li>
+                <li>Motorola</li>
+                <li>Sony</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="projects" id="projects">
+            <h2>Примеры наших работ</h2>
+
+            <p>
+                Здесь можно узнать, какие неисправности встречаются
+                у смартфонов и как проходит их устранение.
+            </p>
+
+            <article class="project-card">
+                <div class="project-description">
+                    <h3>Пример ремонта — замена экрана iPhone</h3>
+
+                    <p>
+                        При повреждении экрана проверяем изображение
+                        и работу сенсора. После согласования ремонта
+                        устанавливаем новый дисплейный модуль.
+                    </p>
+
+                    <ul class="project-services">
+                        <li>Диагностика дисплея и сенсора</li>
+                        <li>Замена повреждённого модуля</li>
+                        <li>Проверка изображения и реакции на касания</li>
+                    </ul>
+                </div>
+                <img class="project-image" src="assets/img/screen-repair.jpg" alt="Замена  экрана">
+            </article>
+        </section>
+        <hr>
+
+        <section class="repair-request">
+            <div class="repair-request-description">
+                <h2>Обсудим ремонт вашего устройства</h2>
+                <p>
+                    Оставьте контакты. Мы уточним модель телефона,
+                    признаки неисправности и порядок диагностики.
+                </p>
+            </div>
+
+            <form class="repair-request-form">
+                <p>
+                    <label for="repair-name">Ваше имя</label>
+                    <input type="text" id="repair-name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="repair-phone">Номер телефона</label>
+                    <input type="tel" id="repair-phone" name="phone" required>
+                </p>
+
+                <button type="submit">Обсудить ремонт</button>
+            </form>
+        </section>
+        <hr>
+
+        <section class="repair-stages">
+            <h2>Этапы ремонта устройства</h2>
+
+            <ol class="repair-stages-list">
+                <li class="repair-stage">
+                    <h3>Приём устройства</h3>
+                    <p>Уточняем модель телефона и признаки неисправности.</p>
+                </li>
+
+                <li class="repair-stage">
+                    <h3>Диагностика</h3>
+                    <p>Проверяем устройство и определяем причину поломки.</p>
+                </li>
+
+                <li class="repair-stage">
+                    <h3>Согласование</h3>
+                    <p>Обсуждаем с клиентом стоимость, сроки и необходимые работы.</p>
+                </li>
+
+                <li class="repair-stage">
+                    <h3>Ремонт</h3>
+                    <p>Устраняем неисправность и заменяем повреждённые детали.</p>
+                </li>
+
+                <li class="repair-stage">
+                    <h3>Проверка</h3>
+                    <p>Проверяем работу устройства после ремонта.</p>
+                </li>
+
+                <li class="repair-stage">
+                    <h3>Выдача устройства</h3>
+                    <p>Показываем результат и даём рекомендации по эксплуатации.</p>
+                </li>
+            </ol>
+        </section>
+        <hr>
+
+        <section class="team" id="team">
+            <div class="team-description">
+                <h2>Наши мастера</h2>
+
+                <p>
+                    Наша команда занимается диагностикой, ремонтом
+                    и настройкой мобильных устройств.
+                </p>
+
+                <ul class="team-specialties">
+                    <li>Диагностика неисправностей</li>
+                    <li>Замена экранов и аккумуляторов</li>
+                    <li>Ремонт электронных компонентов</li>
+                </ul>
+
+                <p>
+                    Перед началом ремонта мастер объясняет причину
+                    неисправности и согласовывает необходимые работы.
+                </p>
+            </div>
+            <img class="team-image" src="assets/img/repair-team.jpg" alt="Мастер ремонтирует  телефон">
+        </section>
+        <hr>
+
+        <section class="care-guide">
+            <div class="care-guide-content">
+                <h2>Получите памятку по уходу за телефоном</h2>
+
+                <p>
+                    Как правильно заряжать смартфон, защищать его
+                    от повреждений и когда обращаться в сервис.
+                </p>
+
+                <form class="care-guide-form">
+                    <p>
+                        <label for="guide-name">Ваше имя</label>
+                        <input type="text" id="guide-name" name="name" required>
+                    </p>
+
+                    <p>
+                        <label for="guide-phone">Номер телефона</label>
+                        <input type="tel" id="guide-phone" name="phone" required>
+                    </p>
+
+                    <p>
+                        <label for="guide-email">Электронная почта</label>
+                        <input type="email" id="guide-email" name="email" required>
+                    </p>
+
+                    <button type="submit">Получить памятку</button>
+                </form>
+            </div>
+            <img class="care-guide-image" src="assets/img/phone-care.jpg" alt="Памятка об опасности">
+        </section>
+        
+        <hr>
+
+
+        <section class="faq" id="faq">
+        <h2>Частые вопросы</h2>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>Сколько стоит ремонт телефона?</h3>
+                <p>
+                    Стоимость зависит от модели устройства и неисправности.
+                    Точную сумму согласовываем после диагностики.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Сколько времени занимает ремонт?</h3>
+                <p>
+                    Срок зависит от сложности поломки и наличия запчастей.
+                    Мастер сообщит его после диагностики.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Есть ли гарантия на ремонт?</h3>
+                <p>
+                    Условия гарантии обсуждаем до начала ремонта.
+                    Они зависят от выполненных работ и установленных деталей.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Нужно ли сохранять данные перед ремонтом?</h3>
+                <p>
+                    По возможности сделайте резервную копию.
+                    Некоторые работы могут потребовать сброса устройства.
+                </p>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer class="site-footer" id="contacts">
+        <h2>Сервис ремонта телефонов</h2>
+
+        <address class="footer-contacts">
+            <ul class="contacts-list">
+                <li>
+                    Телефон:
+                    <a href="tel:+7555355">+7-555-355</a>
+                </li>
+                <li>
+                    Электронная почта:
+                    <a href="mailto:CompanyMail@gooogle.com">
+                        CompanyMail@gooogle.com
+                    </a>
+                </li>
+                <li>Адрес: г. Стамбул, ул. республики, д. 12, кв. 99</li>
+            </ul>
+        </address>
+
+        <p class="copyright">
+            2026 Сервис ремонта телефонов
+        </p>
+   
+    </footer>
 </body>
 </html>
