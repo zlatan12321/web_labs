@@ -1,0 +1,24 @@
+{
+  "name": "wl_actual",
+  "version": "1.0.0",
+  "description": "Репозиторий для WebИС-ЛБ-ПИ-20",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlatan12321/web_labs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zlatan12321/web_labs/issues"
+  },
+  "homepage": "https://github.com/zlatan12321/web_labs#readme",
+  "devDependencies": {
+    "sass": "^1.108.2"
+  }
+}
