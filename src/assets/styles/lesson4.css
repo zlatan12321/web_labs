@@ -60,7 +60,7 @@ address {
     flex-shrink: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #1476df;
+    color: #3264ff;
     text-decoration: none;
 }
 
@@ -87,12 +87,15 @@ address {
 
 .header-contacts a {
     font-size: 13px;
-    color: #1476df;
+    color: #3264ff;
     text-decoration: none;
 }
 
 
 .hero-callback {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
     padding: 24px;
     background-color: #ffffff;
     border-radius: 12px;
@@ -107,7 +110,7 @@ address {
 
 .callback-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 20px;
 }
 
@@ -138,7 +141,7 @@ address {
 
     border: none;
     border-radius: 8px;
-    background-color: #1476df;
+    background-color: #3264ff;
     color: #ffffff;
     cursor: pointer;
 }
@@ -172,10 +175,6 @@ address {
     line-height: 1.6;
 }
 
-.hero-callback {
-    grid-column: 1;
-    grid-row: 2;
-}
 
 .hero-image {
     grid-column: 2;
@@ -205,7 +204,7 @@ address {
 
 .contacts-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
 
     margin: 0;
@@ -274,6 +273,150 @@ address {
     padding-left: 20px;
 }
 
+
+html {
+    scroll-padding-top: 120px;
+}
+
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #3264ff;
+    outline-offset: 4px;
+}
+
+.mobile-navigation,
+.tablet-email {
+    display: none;
+}
+
+.hero-description,
+.services-description,
+.services-offer {
+    min-width: 0;
+}
+
+.hero-description h1 span {
+    color: #3264ff;
+}
+
+.callback-form button {
+    max-width: 100%;
+}
+
+.mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    list-style: none;
+    color: #3264ff;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.menu-bars {
+    width: 32px;
+    height: 24px;
+    border-top: 4px solid currentColor;
+    border-bottom: 4px solid currentColor;
+    position: relative;
+    font-size: 0;
+}
+
+.menu-bars::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    border-top: 4px solid currentColor;
+}
+
+.menu-cross {
+    display: none;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.mobile-menu-panel {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 200;
+    width: 100%;
+    max-height: 100vh;
+    max-height: 100dvh;
+    padding: 130px 40px 120px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: #ffffff;
+    color: #101828;
+    box-shadow: 0 3px 6px rgb(16 24 40 / 15%);
+}
+
+.mobile-menu-title {
+    margin: 0 0 52px;
+    color: #3264ff;
+    text-align: center;
+    font-size: 44px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-menu-list a {
+    color: #101828;
+    font-size: 36px;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.mobile-menu-contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 56px 0 0;
+}
+
+.mobile-menu-contacts a {
+    max-width: 100%;
+    color: #3264ff;
+    font-size: 16px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.mobile-navigation[open] .mobile-menu-toggle {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 201;
+    color: #98a2b3;
+}
+
+.mobile-navigation[open] .menu-bars {
+    display: none;
+}
+
+.mobile-navigation[open] .menu-cross {
+    display: block;
+}
+
 @media (max-width: 1200px) {
     .site-header,
     .hero,
@@ -283,20 +426,24 @@ address {
     }
 
     .site-header {
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 16px 20px;
+        gap: 12px;
+        padding: 16px;
     }
 
-    .main-navigation {
-        order: 1;
-        flex-basis: 100%;
+    .site-logo {
+        font-size: 18px;
     }
 
     .navigation-list {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px 24px;
+        gap: 12px;
+    }
+
+    .navigation-list a {
+        font-size: 12px;
+    }
+
+    .header-contacts a {
+        font-size: 11px;
     }
 
     .hero {
@@ -309,7 +456,12 @@ address {
     }
 
     .hero-callback {
-        padding: 20px;
+        padding: 24px;
+    }
+
+    .callback-form {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
     }
 
     .services {
@@ -325,57 +477,96 @@ address {
         gap: 16px;
     }
 }
+
 @media (max-width: 768px) {
+    html {
+        scroll-padding-top: 110px;
+    }
+
+    html:has(.mobile-navigation[open]) {
+        overflow: hidden;
+    }
+
     .site-header {
-        padding: 16px;
-        gap: 16px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        padding: 18px 16px;
     }
 
-    .site-logo {
-        font-size: 20px;
+    .site-header .site-logo {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 18px;
     }
 
-    .header-contacts {
+    .site-header .main-navigation,
+    .site-header .header-contacts {
+        display: none;
+    }
+
+    .mobile-navigation {
+        display: block;
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+    }
+
+    .tablet-email {
+        display: block;
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
         min-width: 0;
+        font-size: 11px;
+        color: #3264ff;
+        text-decoration: none;
         overflow-wrap: anywhere;
     }
 
-    .navigation-list {
-        gap: 12px 20px;
-    }
-
     .hero {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 32px 0;
-        gap: 24px;
-    }
-
-    .hero-description {
-        grid-column: 1;
-        grid-row: 1;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        padding: 36px 12px;
+        gap: 28px 20px;
+        align-items: start;
     }
 
     .hero-description h1 {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.35;
     }
 
-    .hero-image {
-        grid-column: 1;
-        grid-row: 2;
-
-        max-width: 480px;
-        justify-self: center;
+    .hero-description p {
+        font-size: 14px;
+        line-height: 1.45;
     }
 
     .hero-callback {
-        grid-column: 1;
-        grid-row: 3;
+        padding: 28px;
+    }
+
+    .hero-callback h2 {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 28px;
+    }
+
+    .hero-image {
+        align-self: stretch;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .services {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 32px 0;
+        padding: 32px 12px;
         gap: 24px;
+    }
+
+    .services p,
+    .services li {
+        font-size: 14px;
     }
 
     .services-offer h3 {
@@ -403,76 +594,109 @@ address {
     .site-header {
         top: 8px;
         margin-top: 12px;
-        padding: 12px;
-
-        flex-direction: column;
-        gap: 12px;
+        padding: 18px 8px;
+        grid-template-columns: 40px minmax(0, 1fr) 40px;
+        gap: 4px;
     }
 
-    .site-logo {
+    .site-header .site-logo {
+        font-size: 16px;
+        min-width: 0;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .tablet-email {
+        display: none;
+    }
+
+    .mobile-menu-panel {
+        padding: 84px 28px 52px;
+    }
+
+    .mobile-menu-title {
         font-size: 20px;
+        margin-bottom: 44px;
     }
 
-    .main-navigation {
-        flex-basis: auto;
-        width: 100%;
+    .mobile-menu-list {
+        gap: 24px;
     }
 
-    .navigation-list {
-        justify-content: center;
-        gap: 10px 16px;
+    .mobile-menu-list a {
+        font-size: 24px;
     }
 
-    .navigation-list a {
+    .mobile-menu-contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        max-width: 100%;
+        gap: 20px;
+        margin: 48px auto 0;
+    }
+
+    .mobile-menu-contacts a {
         font-size: 13px;
     }
 
-    .header-contacts {
-        align-items: center;
-        max-width: 100%;
-    }
-
-    .header-contacts a {
-        font-size: 12px;
-        text-align: center;
+    .mobile-navigation[open] .mobile-menu-toggle {
+        top: 24px;
+        right: 24px;
     }
 
     .hero {
-        padding: 24px 0;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 28px 0;
         gap: 20px;
     }
 
-    .hero-description h1 {
-        font-size: 28px;
-        margin-bottom: 16px;
+    .hero-description {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 0 12px;
     }
 
-    .hero-description p {
-        font-size: 14px;
+    .hero-description h1 {
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+
+    .hero-image {
+        grid-column: 1;
+        grid-row: 2;
+        height: auto;
+        object-fit: contain;
     }
 
     .hero-callback {
-        padding: 16px;
+        grid-column: 1;
+        grid-row: 3;
+        position: relative;
+        z-index: 1;
+        width: calc(100% - 24px);
+        margin: -40px auto 0;
+        padding: 28px;
     }
 
-    .hero-callback h2 {
-        font-size: 18px;
-        margin-bottom: 20px;
+    .callback-form label {
+        font-size: 12px;
     }
 
-    .callback-form {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 16px;
+    .callback-form input {
+        font-size: 14px;
     }
 
     .callback-form button {
-        justify-self: stretch;
-        width: 100%;
-        padding: 14px 12px;
+        justify-self: start;
+        width: auto;
+        padding: 12px 16px;
+        font-size: 13px;
     }
 
     .services {
-        padding: 24px 0;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 24px 12px;
         gap: 20px;
     }
 
@@ -484,11 +708,6 @@ address {
         font-size: 18px;
     }
 
-    .services p,
-    .services li {
-        font-size: 14px;
-    }
-
     .site-footer {
         margin-top: 24px;
         margin-bottom: 12px;
@@ -496,8 +715,8 @@ address {
     }
 
     .site-footer h2 {
-        font-size: 20px;
         margin-bottom: 20px;
+        font-size: 20px;
     }
 
     .contacts-list li {
